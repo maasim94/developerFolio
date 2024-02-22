@@ -20,26 +20,23 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Muhammad Arslan Asim",
+  title: "Hi all, I'm Arslan",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "A passionate iOS Software Developer 🚀 Having dedicated a decade to iOS development, my work is marked by versatility, passion, and innovation. Eager to tackle new challenges and pursue growth opportunities, I aim to thrive in leadership roles, fostering creativity and collaboration along the way."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1kKnklXHqsBPgMXckQqhDWmA6BO4z6VF8/view?usp=drivesdk", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://github.com/maasim94",
+  linkedin: "https://www.linkedin.com/in/arslanasim",
+  gmail: "ma.asim93@gmail.com",
+  stackoverflow: "https://goo.gl/qh5Yqw",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -49,14 +46,14 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "Trailblazing iOS Developer Embracing New Horizons",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Craft compelling and intuitive user interfaces (UIs) for your iOS apps"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+    emoji("⚡ Build high-performance native iOS apps"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Seamlessly integrate third-party services and frameworks"
     )
   ],
 
@@ -65,57 +62,57 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      skillName: "iOS Development",
+      fontAwesomeClassname: "fab fa-apple"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      skillName: "Xcode",
+      fontAwesomeClassname: "fas fa-hammer"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
+      skillName: "Swift",
       fontAwesomeClassname: "fab fa-swift"
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      skillName: "SwiftUI",
+      fontAwesomeClassname: "fas fa-mobile"
     },
     {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
+      skillName: "Objective-C",
+      fontAwesomeClassname: "fas fa-laptop-code"
     },
     {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
+      skillName: "UIKit",
+      fontAwesomeClassname: "fab fa-uikit"
     },
     {
-      skillName: "firebase",
+      skillName: "App Store",
+      fontAwesomeClassname: "fab fa-app-store-ios"
+    },
+    {
+      skillName: "Firebase",
       fontAwesomeClassname: "fas fa-fire"
     },
     {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
+      skillName: "Cocoapods",
+      fontAwesomeClassname: "fas fa-link"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
-    }
+      skillName: "Instruments",
+      fontAwesomeClassname: "fas fa-bug"
+    },
+    {
+      skillName: "Realm",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git"
+    },
+    {
+      skillName: "REST API",
+      fontAwesomeClassname: "fas fa-network-wired"
+    },
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -370,7 +367,7 @@ const contactInfo = {
 // Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
+  userName: "maasim94", //Replace "twitter" with your twitter username without @
   display: true // Set true to display this section, defaults to false
 };
 
