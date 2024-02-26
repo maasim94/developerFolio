@@ -57,15 +57,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
         >
           {cardInfo.role}
         </h5>
-        <h5
-          className={
-            isDark
-              ? "experience-text-date dark-mode-text"
-              : "experience-text-date"
-          }
-        >
-          {cardInfo.date}
-        </h5>
+        { dateExtract(cardInfo.date) }
         <h6
           className={
             isDark
@@ -90,4 +82,20 @@ export default function ExperienceCard({cardInfo, isDark}) {
       </div>
     </div>
   );
+
+  function dateExtract(date) {
+    const lines = date.split('\n');
+    return <h5
+      className={isDark
+        ? "experience-text-date dark-mode-text"
+        : "experience-text-date"}
+    >
+       {lines.map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
+    </h5>;
+  }
 }

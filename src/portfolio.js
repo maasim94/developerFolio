@@ -180,7 +180,8 @@ const workExperiences = {
       role: "Senior Software Enginner (iOS)",
       company: "Insurance Authority",
       companylogo: require("./assets/images/insurance_authority.png"),
-      date: `Jan 2019 – Feb 2020 Feb 2017 – Apr 2018`,
+      date: `Jan 2019 – Feb 2020 
+      Feb 2017 – Apr 2018`,
       location: "Abu Dhabi, UAE",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
@@ -201,7 +202,7 @@ const workExperiences = {
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
-      role: "Junaior Software Engineer",
+      role: "Junior Software Engineer",
       company: "S3 Technology",
       location: "Islamabad, Pakistan",
       companylogo: require("./assets/images/s3_technology.png"),
