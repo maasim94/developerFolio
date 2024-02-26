@@ -111,6 +111,15 @@
   padding-top: 1rem;
   font-weight: 600;
 }
+.experience-text-location {
+  text-align: center;
+  color: $textColor;
+  font-size: 18px;
+  margin: 0px;
+  padding-top: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
 
 .experience-text-desc {
   text-align: center;
@@ -133,6 +142,9 @@
   }
   .experience-text-date {
     font-size: 18px;
+  }
+  .experience-text-location {
+    font-size: 16px;
   }
   .experience-roundedimg {
     width: 6.5rem;
