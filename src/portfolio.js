@@ -166,15 +166,15 @@ const workExperiences = {
   experience: [
     {
       role: "Senior Software Engineer (iOS)",
-      company: "Appsfactory Gmbh",
+      company: "Appsfactory",
       companylogo: require("./assets/images/appsfactory_logo.jpeg"),
       date: "Mar 2020 – Present",
       location: "Hamburg, Germany",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      desc: `
+      I tackle diverse iOS projects, building features, fixing bugs, and integrating services.
+      Collaboration is key, ensuring optimal solutions through meetings, mentorship, and staying sharp on the latest advancements.
+      My dedication to smooth project execution is evident in thorough documentation, code reviews, and reporting.
+      `  ,
     },
     {
       role: "Senior Software Enginner (iOS)",
@@ -183,7 +183,10 @@ const workExperiences = {
       date: `Jan 2019 – Feb 2020 
       Feb 2017 – Apr 2018`,
       location: "Abu Dhabi, UAE",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: `
+      Built four diverse iOS applications for the UAE federal authority, contributing to their digital initiatives.
+      Led architectural decisions and collaborated closely with backend and QA teams for a seamless user experience.
+      `
     },
     {
       role: "Software Engineer (iOS)",
@@ -191,7 +194,10 @@ const workExperiences = {
       companylogo: require("./assets/images/algorythma.jpg"),
       date: "April 2018 – Jan 2019",
       location: "Abu Dhabi, UAE",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: `
+      Leveraging my skills at Algorythma, I worked on Swoo a popular streaming app with a massive user base, I honed my expertise in handling high-traffic applications.
+      I contributed significantly to the development process, ensuring scalability and a smooth user experience for millions.
+      `
     },
     {
       role: "Software Engineer (iOS)",
@@ -199,15 +205,24 @@ const workExperiences = {
       companylogo: require("./assets/images/nextbridge.jpg"),
       date: "Mar 2014 – Feb 2017",
       location: "Lahore, Pakistan",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: `
+      Embarked on my software development journey at Nextbridge,
+      a prominent Pakistani software house. Over three years, 
+      I climbed the ladder from junior developer to a mid-level position,
+      consistently contributing to diverse projects and acquiring valuable skills within a dynamic environment.
+      `
     },
     {
-      role: "Junior Software Engineer",
+      role: "Junior Software Engineer (iOS)",
       company: "S3 Technology",
       location: "Islamabad, Pakistan",
       companylogo: require("./assets/images/s3_technology.png"),
       date: "May 2013 – March 2014",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: `
+      My early years in the field ignited a passion for mobile app development.
+      Within a supportive environment, I rapidly expanded my skillset,
+      laying the groundwork for my professional growth and the dedication I bring to the craft today.
+      `
     },
   ]
 };
