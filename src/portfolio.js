@@ -238,32 +238,32 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projects",
+  subtitle: "Leveraged my expertise in iOS to contribute to the development of exciting projects",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/swoo.jpeg"),
+      projectName: "SWOO - Live Stream",
+      projectDesc: `
+      Swoo is an easy way to experience anything happening across the world via live videos.
+      These are broadcast by influencers, celebrities and experts - giving you a peek into the lives of your idols,
+      motivating, inspiring, educating and entertaining you!`,
+    },
+    {
+      image: require("./assets/images/napa.png"),
+      projectName: "NAPA",
+      projectDesc: `
+      The NAPA AutoCare Center app empowers users to manage all their car care needs conveniently from their smartphones.
+      Schedule appointments, track vehicle information, receive repair cost estimates, and get notified when your car is ready.
+      Additionally, access exclusive discounts and explore innovative features designed to simplify your car ownership experience.`,
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
+          name: "App Store",
+          url: "https://apps.apple.com/us/app/napa-autocare/id980284954"
         }
         //  you can add extra buttons here.
       ]
     },
-    {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
-    }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -326,7 +326,7 @@ const achievementSection = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Blogs Section
