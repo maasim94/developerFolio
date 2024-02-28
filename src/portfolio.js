@@ -268,6 +268,11 @@ const bigProjects = {
   display: true // Set false to hide this section, defaults to true
 };
 
+const linkedinRecommandations = {
+  display: true,
+  title: "Recommendations",
+  subTitle: "Beyond the Code: Hear colleagues' insights."
+};
 // Achievement Section
 // Include certificates, talks etc
 
@@ -307,7 +312,7 @@ const achievementSection = {
 const blogSection = {
   title: "Blogs",
   subtitle: "",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
+  displayMediumBlogs: "false", // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [],
   display: false // Set false to hide this section, defaults to true
 };
@@ -367,5 +372,6 @@ export {
   podcastSection,
   contactInfo,
   twitterDetails,
-  isHireable
+  isHireable,
+  linkedinRecommandations
 };
