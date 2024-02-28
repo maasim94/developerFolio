@@ -23,8 +23,8 @@ export default function LinkedinRecommandations() {
           >
             {linkedinRecommandations.subTitle}
           </p>
-      <iframe title= "linkedinRecommandation" src='https://widgets.sociablekit.com/linkedin-recommendations/iframe/25372516' frameborder='0' width='100%' height='550'>
-      </iframe>
+      {/* <iframe title= "linkedinRecommandation" src='https://widgets.sociablekit.com/linkedin-recommendations/iframe/25372516' frameborder='0' width='100%' height='550'>
+      </iframe> */}
       </div>
     </Fade>
   );
