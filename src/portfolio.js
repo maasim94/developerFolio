@@ -23,7 +23,7 @@ const greeting = {
   username: "Muhammad Arslan Asim",
   title: "Hi all, I'm Arslan",
   subTitle: emoji(
-    "A passionate iOS Software Developer 🚀 Having dedicated a decade to iOS development, my work is marked by versatility, passion, and innovation. Eager to tackle new challenges and pursue growth opportunities, I aim to thrive in leadership roles, fostering creativity and collaboration along the way."
+    "A passionate Mobile Software Developer 🚀 Having dedicated a decade to iOS development, currently exploring cross platform, my work is marked by versatility, passion, and innovation. Eager to tackle new challenges and pursue growth opportunities, I aim to thrive in leadership roles, fostering creativity and collaboration along the way."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1kKnklXHqsBPgMXckQqhDWmA6BO4z6VF8/view?usp=drivesdk", // Set to empty to hide the button
@@ -46,7 +46,7 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "Trailblazing iOS Developer Embracing New Horizons",
+  subTitle: "Trailblazing Mobile Developer Embracing New Horizons",
   skills: [
     emoji(
       "⚡ Craft compelling and intuitive user interfaces (UIs) for your iOS apps"
@@ -76,6 +76,14 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "SwiftUI",
       fontAwesomeClassname: "fas fa-mobile"
+    },
+    {
+      skillName: "Andriod",
+      fontAwesomeClassname: "fab fa-android",
+    },
+    {
+      skillName: "Flutter",
+      fontAwesomeClassname: "far fa-file-code",
     },
     {
       skillName: "Objective-C",
