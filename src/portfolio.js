@@ -254,9 +254,8 @@ const bigProjects = {
       image: require("./assets/images/projects/myhighlights.png"),
       projectName: "Vattenfall my highlights",
       projectDesc: `
-      I contributed to the development of Vattenfall my Highlights, a mobile application that empowers users to manage their Vattenfall energy accounts directly from their phones.
-      This includes viewing contracts, updating billing preferences, submitting meter readings, and accessing important documents.
-      Additionally, the app promotes a sustainable lifestyle by offering practical tips on reducing energy consumption and minimizing CO2 footprint.
+      I contributed to the development of Vattenfall my Highlights, Users manage energy accounts, view contracts, update billing, submit meter readings & access documents.
+      The app also promotes sustainability with eco-friendly consumption tips.  Expertise in iOS development & user-centric app creation..
       `,
       footerLink: [
         {
@@ -265,6 +264,37 @@ const bigProjects = {
         }
       ]
     },
+    {
+      image: require("./assets/images/projects/ksta.png"),
+      projectName: "KSTA – Nachrichten",
+      projectDesc: `
+      Collaborated on this top-ranking news app using SwiftUI's declarative UI and Combine's reactive data flow for a seamless user experience.
+      Implemented features like a personalized homepage, bookmarks, and push notifications.
+      Expertise in modern mobile development with SwiftUI and Combine frameworks.
+      `,
+      footerLink: [
+        {
+          name: "App Store",
+          url: "https://apps.apple.com/de/app/id1579904278"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/projects/babaymarkt.png"),
+      projectName: "babymarkt",
+      projectDesc: `
+      Contributed to a team effort development for Babymarkt.de e-commerce app.
+      Managed multi-app codebase, data models & search for a seamless user experience.
+      Integrated loyalty programs & secure payments.  Showcases expertise in mobile commerce solutions.
+      `,
+      footerLink: [
+        {
+          name: "App Store",
+          url: "https://apps.apple.com/de/app/id1519398703"
+        }
+      ]
+    },
+    
     {
       image: require("./assets/images/projects/enpure.png"),
       projectName: "Vattenfall ENPURE",
@@ -278,16 +308,45 @@ const bigProjects = {
           name: "App Store",
           url: "https://apps.apple.com/de/app/id1133123529"
         }
+      ]
+    },
+    
+    {
+      image: require("./assets/images/projects/myFoodDoctor.png"),
+      projectName: "myFoodDoctor",
+      projectDesc: `
+      Spearheaded the development of myFoodDoctor,  personalized nutrition app with data analysis & recommendation engine. Analyzed user intake (diary & scanner) for weight loss & healthier habits.
+      Implemented tiered subscriptions (in-app purchases) for ongoing development.  Showcases expertise in iOS development, data analysis & health app creation..
+      `,
+      footerLink: [
+        {
+          name: "App Store",
+          url: "https://apps.apple.com/de/app/id1493411240"
+        }
         //  you can add extra buttons here.
+      ]
+    },
+    {
+      image: require("./assets/images/projects/bhamown.png"),
+      projectName: "Bhams Own SmartCard",
+      projectDesc: `
+      Developed Bhams Own App for Birmingham businesses. Implemented secure in-app payment system with double encryption for user financial data.
+      Designed user-friendly interface for location-based deals & discount redemption.  Highlights expertise in mobile app development and secure payment solutions.
+      `,
+      footerLink: [
+        {
+          name: "App Store",
+          url: "https://apps.apple.com/us/app/id1474278140"
+        }
       ]
     },
     {
       image: require("./assets/images/projects/napa.png"),
       projectName: "NAPA",
       projectDesc: `
-      The NAPA AutoCare Center app empowers users to manage all their car care needs conveniently from their smartphones.
-      Schedule appointments, track vehicle information, receive repair cost estimates, and get notified when your car is ready.
-      Additionally, access exclusive discounts and explore innovative features designed to simplify your car ownership experience.`,
+      Developed (Objective-C) NAPA AutoCare Center app. User manages car care: scheduling appointments, tracking vehicle info, 
+      receiving repair estimates & push notifications. Expertise in mobile apps with appointment systems, secure data & real-time communication.
+      `,
       footerLink: [
         {
           name: "App Store",
