@@ -52,6 +52,7 @@ export default function StartupProject() {
                       ></img>
                     </div>
                   ) : null}
+                  <div className="project-content">
                   <div className="project-detail">
                     <h5
                       className={isDark ? "dark-mode card-title" : "card-title"}
@@ -65,6 +66,7 @@ export default function StartupProject() {
                     >
                       {project.projectDesc}
                     </p>
+                    </div>
                     {project.footerLink ? (
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {

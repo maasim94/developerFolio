@@ -24,8 +24,9 @@
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
-  justify-content: center;
+  justify-content: flex-start;
 }
+
 .project-card-light {
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   -webkit-transition: all 0.3s ease;
@@ -40,9 +41,19 @@
   transition: all 0.25s ease;
 }
 
+.project-content {
+  display: flex; /* Enable flexbox layout for flexible space */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+}
+
 .project-detail {
+  flex: 1;
   text-align: center;
 }
+
 .project-card-light:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
 }

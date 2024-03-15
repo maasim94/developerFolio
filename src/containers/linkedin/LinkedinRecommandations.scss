@@ -5,3 +5,10 @@
   height: auto;
   width: 250px;
 }
+
+@media (max-width: 768px) {
+  .linkedin-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+}

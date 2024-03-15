@@ -242,15 +242,47 @@ const bigProjects = {
   subtitle: "Leveraged my expertise in iOS to contribute to the development of exciting projects",
   projects: [
     {
-      image: require("./assets/images/swoo.jpeg"),
+      image: require("./assets/images/projects/swoo.jpeg"),
       projectName: "SWOO - Live Stream",
       projectDesc: `
       Swoo is an easy way to experience anything happening across the world via live videos.
       These are broadcast by influencers, celebrities and experts - giving you a peek into the lives of your idols,
       motivating, inspiring, educating and entertaining you!`,
     },
+    
     {
-      image: require("./assets/images/napa.png"),
+      image: require("./assets/images/projects/myhighlights.png"),
+      projectName: "Vattenfall my highlights",
+      projectDesc: `
+      I contributed to the development of Vattenfall my Highlights, a mobile application that empowers users to manage their Vattenfall energy accounts directly from their phones.
+      This includes viewing contracts, updating billing preferences, submitting meter readings, and accessing important documents.
+      Additionally, the app promotes a sustainable lifestyle by offering practical tips on reducing energy consumption and minimizing CO2 footprint.
+      `,
+      footerLink: [
+        {
+          name: "App Store",
+          url: "https://apps.apple.com/de/app/id1401180718"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/projects/enpure.png"),
+      projectName: "Vattenfall ENPURE",
+      projectDesc: `
+      Played a key role in developing ENPURE, a mobile app offering the first combined green electricity and gas contract. 
+      This user-friendly app streamlines everything from contract signing and meter readings to communication and changes,
+      all while promoting sustainability with 100% green electricity and CO2-neutral gas.
+      `,
+      footerLink: [
+        {
+          name: "App Store",
+          url: "https://apps.apple.com/de/app/id1133123529"
+        }
+        //  you can add extra buttons here.
+      ]
+    },
+    {
+      image: require("./assets/images/projects/napa.png"),
       projectName: "NAPA",
       projectDesc: `
       The NAPA AutoCare Center app empowers users to manage all their car care needs conveniently from their smartphones.
@@ -264,6 +296,7 @@ const bigProjects = {
         //  you can add extra buttons here.
       ]
     },
+    
   ],
   display: true // Set false to hide this section, defaults to true
 };
