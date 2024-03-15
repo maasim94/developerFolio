@@ -49,12 +49,15 @@ const skillsSection = {
   subTitle: "Trailblazing Mobile Developer Embracing New Horizons",
   skills: [
     emoji(
-      "⚡ Craft compelling and intuitive user interfaces (UIs) for your iOS apps"
+      "⚡ Craft compelling and intuitive user interfaces (UIs)"
     ),
     emoji("⚡ Build high-performance native iOS apps"),
     emoji(
       "⚡ Seamlessly integrate third-party services and frameworks"
-    )
+    ),
+    emoji(
+      "⚡ Streamlined Mobile Development: iOS specialist, exploring cross-platform efficiency."
+    ),
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
