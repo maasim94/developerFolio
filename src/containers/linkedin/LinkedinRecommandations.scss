@@ -12,3 +12,71 @@
     text-align: center;
   }
 }
+
+.recommendation-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.recommendation-item2 {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid $lightBorder1;
+  // /* Light grey border */
+  border-radius: 10px;
+  // /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  // /* Subtle shadow */
+  background-color: $lightBackground2;
+  // /* White background */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.recommendation-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.recommendation-company {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #8B8000;
+}
+
+.recommendation-text {
+  font-style: italic;
+  flex-grow: 1;
+  /* Makes this element take up the remaining space */
+}
+
+.dark-mode .recommendation-item {
+  /* Stronger shadow for dark mode */
+  background-color: $darkBackground;
+  /* Darker background for dark mode */
+}
+
+.dark-mode .recommendation-item2 {
+  /* Darker border for dark mode */
+  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
+  /* Stronger shadow for dark mode */
+  background-color: $darkBackground;
+  /* Darker background for dark mode */
+}
+
+.dark-mode .recommendation-name {
+  color: #fff;
+}
+
+.dark-mode .recommendation-text {
+  color: #ccc;
+  /* Lighter text for dark mode */
+}
+
+.dark-mode .recommendation-company {
+  color: #FFFF00;
+}
