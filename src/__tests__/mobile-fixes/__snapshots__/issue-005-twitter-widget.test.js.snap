@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ISSUE-005: Twitter Widget Mobile Responsiveness Snapshot Testing snapshot: Twitter widget in dark theme 1`] = `
+<div
+  class="tw-main-div"
+  id="twitter"
+>
+  <div
+    class="centerContent"
+  >
+    <div
+      data-height="400"
+      data-screen-name="testuser"
+      data-source-type="profile"
+      data-testid="twitter-timeline-embed"
+      data-theme="dark"
+      data-width="375"
+      placeholder="[object Object]"
+    >
+      Mocked Twitter Timeline for 
+      testuser
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ISSUE-005: Twitter Widget Mobile Responsiveness Snapshot Testing snapshot: Twitter widget mobile layout 1`] = `
+<div
+  class="tw-main-div"
+  id="twitter"
+>
+  <div
+    class="centerContent"
+  >
+    <div
+      data-height="400"
+      data-screen-name="testuser"
+      data-source-type="profile"
+      data-testid="twitter-timeline-embed"
+      data-theme="light"
+      data-width="375"
+      placeholder="[object Object]"
+    >
+      Mocked Twitter Timeline for 
+      testuser
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ISSUE-005: Twitter Widget Responsive Behavior snapshot: Twitter widget on mobile 1`] = `
+<div
+  class="tw-main-div"
+  id="twitter"
+>
+  <div
+    class="centerContent"
+  >
+    <div
+      bordercolor="#fff"
+      data-height="400"
+      data-screen-name="testuser"
+      data-source-type="profile"
+      data-testid="twitter-timeline-embed"
+      data-theme="light"
+      data-width="300"
+      placeholder="[object Object]"
+    >
+      Mocked Twitter Timeline for 
+      testuser
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ISSUE-005: Twitter Widget Responsive Behavior snapshot: Twitter widget on tablet 1`] = `
+<div
+  class="tw-main-div"
+  id="twitter"
+>
+  <div
+    class="centerContent"
+  >
+    <div
+      bordercolor="#fff"
+      data-height="400"
+      data-screen-name="testuser"
+      data-source-type="profile"
+      data-testid="twitter-timeline-embed"
+      data-theme="light"
+      data-width="400"
+      placeholder="[object Object]"
+    >
+      Mocked Twitter Timeline for 
+      testuser
+    </div>
+  </div>
+</div>
+`;
