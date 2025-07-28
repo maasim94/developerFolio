@@ -33,15 +33,20 @@
   margin-right: 0 !important;
 }
 /* Media Query */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .main-button {
-    font-size: 0.938rem;
-    padding: 12px 18px;
+    font-size: 0.875rem; /* 14px minimum for readability */
+    padding: 14px 20px; /* Increased touch area */
+    min-width: 120px; /* Ensure adequate touch target */
+    min-height: 44px; /* iOS recommended minimum */
     margin-right: 0px;
   }
 }
+
 @media (max-width: 320px) {
   .main-button {
-    font-size: 0.75rem;
+    font-size: 0.875rem; /* Keep readable size - no smaller than 14px */
+    padding: 12px 18px;
+    width: 100%; /* Full width on very small screens */
   }
 }
