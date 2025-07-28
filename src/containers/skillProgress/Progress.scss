@@ -45,26 +45,36 @@
 
 /* Media Query */
 
-@media (max-width: 1456px) {
+@media (max-width: 1456px) and (min-width: 768px) {
   .skills-bar {
     line-height: 4rem;
   }
   .skills-image {
-    display: none;
+    max-width: 300px; /* Reduce size instead of hiding */
+    margin: 20px auto;
     order: 2;
+  }
+  .skills-image > img {
+    margin-left: 0; /* Center the image */
   }
 }
 
 @media (max-width: 768px) {
   .skills-container {
     flex-direction: column;
+    padding: 20px 15px; /* Add mobile padding */
   }
   .skills-bar {
     line-height: 3rem;
-    margin: 20px;
+    margin: 10px 0; /* Reduced margin for mobile */
   }
   .skills-image {
-    display: none;
+    max-width: 250px;
+    margin: 20px auto 0;
+    display: block; /* Show on mobile with reduced size */
     order: 2;
+  }
+  .skills-image > img {
+    margin-left: 0; /* Center the image */
   }
 }

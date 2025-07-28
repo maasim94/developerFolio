@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ISSUE-006: Skills Progress Mobile Layout snapshot: skills progress component on mobile 1`] = `
+<div
+  data-testid="fade-container"
+>
+  <div
+    class="skills-container"
+  >
+    <div
+      class="skills-bar"
+    >
+      <h1
+        class="skills-heading"
+      >
+        Proficiency
+      </h1>
+      <div
+        class="skill"
+      >
+        <p>
+          React
+        </p>
+        <div
+          class="meter"
+        >
+          <span
+            style="width: 85%;"
+          />
+        </div>
+      </div>
+      <div
+        class="skill"
+      >
+        <p>
+          JavaScript
+        </p>
+        <div
+          class="meter"
+        >
+          <span
+            style="width: 90%;"
+          />
+        </div>
+      </div>
+      <div
+        class="skill"
+      >
+        <p>
+          Node.js
+        </p>
+        <div
+          class="meter"
+        >
+          <span
+            style="width: 75%;"
+          />
+        </div>
+      </div>
+      <div
+        class="skill"
+      >
+        <p>
+          Python
+        </p>
+        <div
+          class="meter"
+        >
+          <span
+            style="width: 70%;"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="skills-image"
+    >
+      <img
+        alt="Skills"
+        src="[object Object]"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ISSUE-006: Skills Progress Mobile Layout snapshot: skills progress component on tablet 1`] = `
+<div
+  data-testid="fade-container"
+>
+  <div
+    class="skills-container"
+  >
+    <div
+      class="skills-bar"
+    >
+      <h1
+        class="skills-heading"
+      >
+        Proficiency
+      </h1>
+      <div
+        class="skill"
+      >
+        <p>
+          React
+        </p>
+        <div
+          class="meter"
+        >
+          <span
+            style="width: 85%;"
+          />
+        </div>
+      </div>
+      <div
+        class="skill"
+      >
+        <p>
+          JavaScript
+        </p>
+        <div
+          class="meter"
+        >
+          <span
+            style="width: 90%;"
+          />
+        </div>
+      </div>
+      <div
+        class="skill"
+      >
+        <p>
+          Node.js
+        </p>
+        <div
+          class="meter"
+        >
+          <span
+            style="width: 75%;"
+          />
+        </div>
+      </div>
+      <div
+        class="skill"
+      >
+        <p>
+          Python
+        </p>
+        <div
+          class="meter"
+        >
+          <span
+            style="width: 70%;"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="skills-image"
+    >
+      <img
+        alt="Skills"
+        src="[object Object]"
+      />
+    </div>
+  </div>
+</div>
+`;

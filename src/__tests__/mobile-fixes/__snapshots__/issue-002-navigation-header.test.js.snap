@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ISSUE-002: Navigation Header Mobile Improvements snapshot: header component in dark mode 1`] = `
+<div
+  data-testid="headroom"
+>
+  <header
+    class="dark-menu header"
+  >
+    <a
+      class="logo"
+      href="/"
+    >
+      <span
+        class="grey-color"
+      >
+         &lt;
+      </span>
+      <span
+        class="logo-name"
+      >
+        Test User
+      </span>
+      <span
+        class="grey-color"
+      >
+        /&gt;
+      </span>
+    </a>
+    <input
+      class="menu-btn"
+      id="menu-btn"
+      type="checkbox"
+    />
+    <label
+      class="menu-icon"
+      for="menu-btn"
+      style="color: white;"
+    >
+      <span
+        class="navicon navicon-dark"
+      />
+    </label>
+    <ul
+      class="dark-menu menu"
+    >
+      <li>
+        <a
+          href="#skills"
+        >
+          Skills
+        </a>
+      </li>
+      <li>
+        <a
+          href="#experience"
+        >
+          Work Experiences
+        </a>
+      </li>
+      <li>
+        <a
+          href="#education"
+        >
+          Education
+        </a>
+      </li>
+      <li>
+        <a
+          href="#opensource"
+        >
+          Open Source
+        </a>
+      </li>
+      <li>
+        <a
+          href="#projects"
+        >
+          Projects
+        </a>
+      </li>
+      <li>
+        <a
+          href="#recommandations"
+        >
+          Recommendations
+        </a>
+      </li>
+      <li>
+        <a
+          href="#achievements"
+        >
+          Achievements
+        </a>
+      </li>
+      <li>
+        <a
+          href="#blogs"
+        >
+          Blogs
+        </a>
+      </li>
+      <li>
+        <a
+          href="#talks"
+        >
+          Talks
+        </a>
+      </li>
+      <li>
+        <a
+          href="#contact"
+        >
+          Contact Me
+        </a>
+      </li>
+      <li>
+        <a>
+          <div
+            data-testid="toggle-switch"
+          >
+            Toggle
+          </div>
+        </a>
+      </li>
+    </ul>
+  </header>
+</div>
+`;
+
+exports[`ISSUE-002: Navigation Header Mobile Improvements snapshot: header component in light mode 1`] = `
+<div
+  data-testid="headroom"
+>
+  <header
+    class="header"
+  >
+    <a
+      class="logo"
+      href="/"
+    >
+      <span
+        class="grey-color"
+      >
+         &lt;
+      </span>
+      <span
+        class="logo-name"
+      >
+        Test User
+      </span>
+      <span
+        class="grey-color"
+      >
+        /&gt;
+      </span>
+    </a>
+    <input
+      class="menu-btn"
+      id="menu-btn"
+      type="checkbox"
+    />
+    <label
+      class="menu-icon"
+      for="menu-btn"
+      style="color: white;"
+    >
+      <span
+        class="navicon"
+      />
+    </label>
+    <ul
+      class="menu"
+    >
+      <li>
+        <a
+          href="#skills"
+        >
+          Skills
+        </a>
+      </li>
+      <li>
+        <a
+          href="#experience"
+        >
+          Work Experiences
+        </a>
+      </li>
+      <li>
+        <a
+          href="#education"
+        >
+          Education
+        </a>
+      </li>
+      <li>
+        <a
+          href="#opensource"
+        >
+          Open Source
+        </a>
+      </li>
+      <li>
+        <a
+          href="#projects"
+        >
+          Projects
+        </a>
+      </li>
+      <li>
+        <a
+          href="#recommandations"
+        >
+          Recommendations
+        </a>
+      </li>
+      <li>
+        <a
+          href="#achievements"
+        >
+          Achievements
+        </a>
+      </li>
+      <li>
+        <a
+          href="#blogs"
+        >
+          Blogs
+        </a>
+      </li>
+      <li>
+        <a
+          href="#talks"
+        >
+          Talks
+        </a>
+      </li>
+      <li>
+        <a
+          href="#contact"
+        >
+          Contact Me
+        </a>
+      </li>
+      <li>
+        <a>
+          <div
+            data-testid="toggle-switch"
+          >
+            Toggle
+          </div>
+        </a>
+      </li>
+    </ul>
+  </header>
+</div>
+`;

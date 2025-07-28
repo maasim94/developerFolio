@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ISSUE-004: Button Component Mobile Improvements snapshot: button component with default props 1`] = `
+<div
+  class="test-button-container"
+>
+  <a
+    class="main-button"
+    href="#test"
+  >
+    Test Button
+  </a>
+</div>
+`;
+
+exports[`ISSUE-004: Button Component Mobile Improvements snapshot: button component with newTab=true 1`] = `
+<div
+  class="test-button-container"
+>
+  <a
+    class="main-button"
+    href="#test"
+    target="_blank"
+  >
+    Test Button
+  </a>
+</div>
+`;

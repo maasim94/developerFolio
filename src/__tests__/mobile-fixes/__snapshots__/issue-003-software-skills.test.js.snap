@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ISSUE-003: Software Skills Mobile Layout snapshot: software skills component on mobile 1`] = `
+<div>
+  <div
+    class="software-skills-main-div"
+  >
+    <ul
+      class="dev-icons"
+    >
+      <li
+        class="software-skill-inline"
+        name="React"
+      >
+        <i
+          class="fab fa-react"
+        />
+        <p>
+          React
+        </p>
+      </li>
+      <li
+        class="software-skill-inline"
+        name="JavaScript"
+      >
+        <i
+          class="fab fa-js-square"
+        />
+        <p>
+          JavaScript
+        </p>
+      </li>
+      <li
+        class="software-skill-inline"
+        name="Node.js"
+      >
+        <i
+          class="fab fa-node-js"
+        />
+        <p>
+          Node.js
+        </p>
+      </li>
+      <li
+        class="software-skill-inline"
+        name="Python"
+      >
+        <i
+          class="fab fa-python"
+        />
+        <p>
+          Python
+        </p>
+      </li>
+      <li
+        class="software-skill-inline"
+        name="Swift"
+      >
+        <i
+          class="fab fa-swift"
+        />
+        <p>
+          Swift
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`ISSUE-003: Software Skills Mobile Layout snapshot: software skills component on small mobile 1`] = `
+<div>
+  <div
+    class="software-skills-main-div"
+  >
+    <ul
+      class="dev-icons"
+    >
+      <li
+        class="software-skill-inline"
+        name="React"
+      >
+        <i
+          class="fab fa-react"
+        />
+        <p>
+          React
+        </p>
+      </li>
+      <li
+        class="software-skill-inline"
+        name="JavaScript"
+      >
+        <i
+          class="fab fa-js-square"
+        />
+        <p>
+          JavaScript
+        </p>
+      </li>
+      <li
+        class="software-skill-inline"
+        name="Node.js"
+      >
+        <i
+          class="fab fa-node-js"
+        />
+        <p>
+          Node.js
+        </p>
+      </li>
+      <li
+        class="software-skill-inline"
+        name="Python"
+      >
+        <i
+          class="fab fa-python"
+        />
+        <p>
+          Python
+        </p>
+      </li>
+      <li
+        class="software-skill-inline"
+        name="Swift"
+      >
+        <i
+          class="fab fa-swift"
+        />
+        <p>
+          Swift
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
