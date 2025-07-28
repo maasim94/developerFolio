@@ -29,3 +29,35 @@
 .software-skill-inline > i:hover ~ p {
   color: $skillsColor;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .dev-icons {
+    font-size: 2.5rem; /* Reduced from 3rem for mobile */
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  .software-skill-inline {
+    margin-right: 15px; /* Reduced spacing for mobile */
+    margin-bottom: 15px;
+    min-width: 80px; /* Ensure consistent sizing */
+  }
+  
+  .software-skill-inline > p {
+    font-size: 12px; /* Increased from 10px for readability */
+    margin-top: 5px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .dev-icons {
+    font-size: 2rem; /* Further reduced for small screens */
+  }
+  
+  .software-skill-inline {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
