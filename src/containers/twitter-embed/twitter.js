@@ -1,4 +1,4 @@
-import React, {Suspense, useContext} from "react";
+import React, {Suspense, useContext, useState, useEffect} from "react";
 import "./twitter.scss";
 import Loading from "../loading/Loading";
 import {TwitterTimelineEmbed} from "react-twitter-embed";
@@ -16,10 +16,25 @@ function timeOut() {
     }
   }, 10000);
 }
-var widthScreen = window.screen.width;
 
 export default function Twitter() {
   const {isDark} = useContext(StyleContext);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const getTwitterWidth = () => {
+    if (screenWidth <= 480) return 300;
+    if (screenWidth <= 768) return 400;
+    return 500;
+  };
 
   if (!twitterDetails.display) {
     return null;
@@ -35,7 +50,7 @@ export default function Twitter() {
             <TwitterTimelineEmbed
               sourceType="profile"
               screenName={twitterDetails.userName}
-              options={{height: 400, width: {widthScreen}}}
+              options={{height: 400, width: getTwitterWidth()}}
               placeholder={renderLoader()}
               autoHeight={false}
               borderColor="#fff"
