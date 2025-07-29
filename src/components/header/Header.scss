@@ -5,6 +5,12 @@
   max-height: 100px;
 }
 
+/* Ensure headroom stays above all content when sticky/fixed */
+.headroom {
+  z-index: 1001 !important;
+  /* Override react-headroom's default z-index */
+}
+
 /* header */
 
 .dark-menu {
@@ -28,8 +34,10 @@
   margin: 0px auto;
   box-sizing: border-box;
   overflow-x: hidden;
-  z-index: 1001; /* Ensure header stays above project cards and other content */
-  position: relative; /* Required for z-index to work */
+  z-index: 1001;
+  /* Ensure header stays above project cards and other content */
+  position: relative;
+  /* Required for z-index to work */
 }
 
 .header ul {

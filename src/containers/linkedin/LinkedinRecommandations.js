@@ -40,7 +40,7 @@ export default function LinkedinRecommandations() {
   };
 
   // Always show random 3 recommendations on main page
-  const displayRecommendations = recommendations.length > 3 
+  const displayRecommendations = recommendations.length > 3
     ? shuffleArray(recommendations).slice(0, 3)
     : recommendations;
 
@@ -68,7 +68,7 @@ export default function LinkedinRecommandations() {
   const renderRecommendationCard = (recommendation, index) => (
     <div className="recommendation-card" key={index}>
       <div className="recommendation-header">
-        <img 
+        <img
           src={getAvatarUrl(recommendation["First Name"], recommendation["Last Name"])}
           alt={`${recommendation["First Name"]} ${recommendation["Last Name"]}`}
           className="recommendation-avatar"
@@ -91,7 +91,7 @@ export default function LinkedinRecommandations() {
   const renderAllRecommendationsCard = (recommendation, index) => (
     <div className="all-recommendation-card" key={index}>
       <div className="all-recommendation-header">
-        <img 
+        <img
           src={getAvatarUrlLarge(recommendation["First Name"], recommendation["Last Name"])}
           alt={`${recommendation["First Name"]} ${recommendation["Last Name"]}`}
           className="all-recommendation-avatar"
@@ -127,14 +127,14 @@ export default function LinkedinRecommandations() {
           </p>
 
           <div className="recommendations-grid">
-            {displayRecommendations.map((recommendation, index) => 
+            {displayRecommendations.map((recommendation, index) =>
               renderRecommendationCard(recommendation, index)
             )}
           </div>
 
           {recommendations.length > 3 && (
             <div className="view-all-button-container">
-              <button 
+              <button
                 className={isDark ? "dark-mode view-all-btn" : "view-all-btn"}
                 onClick={handleViewAllRecommendations}
               >
@@ -151,9 +151,9 @@ export default function LinkedinRecommandations() {
           <div className="recommendations-modal-content">
             <div className="recommendations-modal-header">
               <h2 className={isDark ? "dark-mode modal-title" : "modal-title"}>
-                All LinkedIn Recommendations
+                All Recommendations
               </h2>
-              <button 
+              <button
                 className={isDark ? "dark-mode close-button" : "close-button"}
                 onClick={handleCloseAllRecommendations}
               >
@@ -162,7 +162,7 @@ export default function LinkedinRecommandations() {
             </div>
             <div className="recommendations-modal-body">
               <div className="all-recommendations-grid">
-                {recommendations.map((recommendation, index) => 
+                {recommendations.map((recommendation, index) =>
                   renderAllRecommendationsCard(recommendation, index)
                 )}
               </div>

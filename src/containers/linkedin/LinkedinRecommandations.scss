@@ -195,6 +195,7 @@
   padding: 24px 30px;
   border-bottom: 1px solid #e1e8ed;
   flex-shrink: 0;
+  gap: 16px; // Add gap between title and close button
 
   .dark-mode & {
     border-bottom-color: #333;
@@ -202,6 +203,12 @@
 
   @media (max-width: 768px) {
     padding: 20px;
+    gap: 12px; // Smaller gap on mobile
+  }
+
+  @media (max-width: 480px) {
+    padding: 16px;
+    gap: 8px; // Even smaller gap on very small screens
   }
 }
 
@@ -210,6 +217,8 @@
   font-weight: 700;
   color: $textColor;
   margin: 0;
+  flex: 1; // Take available space but don't push close button
+  min-width: 0; // Allow text to truncate if needed
 
   .dark-mode & {
     color: $textColorDark;
@@ -231,13 +240,16 @@
   color: #666;
   cursor: pointer;
   padding: 0;
-  width: 40px;
-  height: 40px;
+  width: 40px !important; // Force width
+  height: 40px !important; // Force height
+  min-width: 40px !important; // Prevent stretching
+  max-width: 40px !important; // Prevent stretching
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   transition: all 0.3s ease;
+  flex-shrink: 0; // Prevent shrinking in flex container
 
   &:hover {
     background: #f0f0f0;
@@ -254,9 +266,19 @@
   }
 
   @media (max-width: 768px) {
-    font-size: 28px;
-    width: 35px;
-    height: 35px;
+    font-size: 28px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important; // Prevent stretching on mobile
+    max-width: 32px !important; // Prevent stretching on mobile
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px !important;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important; // Prevent stretching on small mobile
+    max-width: 30px !important; // Prevent stretching on small mobile
   }
 }
 
