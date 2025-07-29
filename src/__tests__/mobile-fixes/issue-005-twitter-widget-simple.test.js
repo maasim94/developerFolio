@@ -26,8 +26,7 @@ jest.mock('react-twitter-embed', () => ({
         ...props
     }) => {
         // Extract width from the object structure that the component uses
-        const mockScreenWidth = 375; // Default mobile width for testing
-        const widthValue = options?.width?.widthScreen || mockScreenWidth;
+        const widthValue = options?.width?.widthScreen || window.screen.width || 375;
 
         return (
             <div
@@ -62,6 +61,20 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
         );
     };
 
+    // Mock window.screen.width for different screen sizes
+    const mockScreenWidth = (width) => {
+        Object.defineProperty(window.screen, 'width', {
+            writable: true,
+            configurable: true,
+            value: width,
+        });
+    };
+
+    beforeEach(() => {
+        // Reset to default mobile width
+        mockScreenWidth(375);
+    });
+
     describe('Basic Rendering and Structure', () => {
         test('should render Twitter widget with proper structure', () => {
             const ContextWrapper = createStyleContextWrapper();
@@ -95,7 +108,8 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
     });
 
     describe('Screen Width Responsiveness', () => {
-        test('should render with default width configuration', () => {
+        test('should use mobile screen width (375px)', () => {
+            mockScreenWidth(375);
             const ContextWrapper = createStyleContextWrapper();
 
             render(
@@ -105,12 +119,11 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
             );
 
             const twitterEmbed = screen.getByTestId('twitter-timeline-embed');
-            expect(twitterEmbed).toHaveAttribute('data-width');
-            // Widget should have some width value (testing structure, not specific responsive behavior)
-            expect(twitterEmbed.getAttribute('data-width')).toBeTruthy();
+            expect(twitterEmbed).toHaveAttribute('data-width', '375');
         });
 
-        test('should maintain consistent width attribute', () => {
+        test('should use tablet screen width (768px)', () => {
+            mockScreenWidth(768);
             const ContextWrapper = createStyleContextWrapper();
 
             render(
@@ -120,12 +133,11 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
             );
 
             const twitterEmbed = screen.getByTestId('twitter-timeline-embed');
-            const widthAttr = twitterEmbed.getAttribute('data-width');
-            expect(widthAttr).toBeTruthy();
-            expect(typeof widthAttr).toBe('string');
+            expect(twitterEmbed).toHaveAttribute('data-width', '768');
         });
 
-        test('should handle widget width configuration properly', () => {
+        test('should use desktop screen width (1024px)', () => {
+            mockScreenWidth(1024);
             const ContextWrapper = createStyleContextWrapper();
 
             render(
@@ -135,32 +147,21 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
             );
 
             const twitterEmbed = screen.getByTestId('twitter-timeline-embed');
-            // Test that the component sets up the width attribute correctly
-            expect(twitterEmbed).toHaveAttribute('data-width');
-            expect(twitterEmbed).toBeInTheDocument();
+            expect(twitterEmbed).toHaveAttribute('data-width', '1024');
         });
 
-        test('should maintain widget structure across different renders', () => {
+        test('should handle very small mobile screens (320px)', () => {
+            mockScreenWidth(320);
             const ContextWrapper = createStyleContextWrapper();
 
-            const { rerender } = render(
+            render(
                 <ContextWrapper>
                     <Twitter />
                 </ContextWrapper>
             );
 
-            let twitterEmbed = screen.getByTestId('twitter-timeline-embed');
-            const initialWidth = twitterEmbed.getAttribute('data-width');
-
-            // Re-render and verify consistency
-            rerender(
-                <ContextWrapper>
-                    <Twitter />
-                </ContextWrapper>
-            );
-
-            twitterEmbed = screen.getByTestId('twitter-timeline-embed');
-            expect(twitterEmbed.getAttribute('data-width')).toBe(initialWidth);
+            const twitterEmbed = screen.getByTestId('twitter-timeline-embed');
+            expect(twitterEmbed).toHaveAttribute('data-width', '320');
             expect(twitterEmbed).toBeInTheDocument();
         });
     });
@@ -224,7 +225,21 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
     });
 
     describe('Snapshot Testing', () => {
-        test('snapshot: Twitter widget mobile layout', () => {
+        test('snapshot: Twitter widget on mobile (375px)', () => {
+            mockScreenWidth(375);
+            const ContextWrapper = createStyleContextWrapper();
+
+            const { container } = render(
+                <ContextWrapper>
+                    <Twitter />
+                </ContextWrapper>
+            );
+
+            expect(container.firstChild).toMatchSnapshot();
+        });
+
+        test('snapshot: Twitter widget on tablet (768px)', () => {
+            mockScreenWidth(768);
             const ContextWrapper = createStyleContextWrapper();
 
             const { container } = render(
@@ -237,6 +252,7 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
         });
 
         test('snapshot: Twitter widget in dark theme', () => {
+            mockScreenWidth(375);
             const ContextWrapper = createStyleContextWrapper(true);
 
             const { container } = render(
@@ -263,6 +279,7 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
         });
 
         test('should handle responsive layout consistently across renders', () => {
+            mockScreenWidth(768);
             const ContextWrapper = createStyleContextWrapper();
 
             const { rerender } = render(
@@ -272,7 +289,7 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
             );
 
             let widget = screen.getByTestId('twitter-timeline-embed');
-            const initialWidth = widget.getAttribute('data-width');
+            expect(widget).toHaveAttribute('data-width', '768');
 
             // Re-render should maintain the same configuration
             rerender(
@@ -282,15 +299,19 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
             );
 
             widget = screen.getByTestId('twitter-timeline-embed');
-            expect(widget.getAttribute('data-width')).toBe(initialWidth);
+            expect(widget).toHaveAttribute('data-width', '768');
             expect(widget).toBeInTheDocument();
         });
 
-        test('should maintain widget structure consistently', () => {
+        test('should maintain widget structure on different screen sizes', () => {
             const ContextWrapper = createStyleContextWrapper();
 
-            // Test multiple renders to ensure consistency
-            for (let i = 0; i < 3; i++) {
+            // Test multiple screen sizes
+            const screenSizes = [320, 375, 768, 1024, 1440];
+
+            screenSizes.forEach(size => {
+                mockScreenWidth(size);
+
                 const { container } = render(
                     <ContextWrapper>
                         <Twitter />
@@ -298,11 +319,11 @@ describe('ISSUE-005: Twitter Widget Mobile Responsiveness', () => {
                 );
 
                 const widget = screen.getByTestId('twitter-timeline-embed');
-                expect(widget).toHaveAttribute('data-width');
+                expect(widget).toHaveAttribute('data-width', size.toString());
                 expect(widget).toBeInTheDocument();
 
                 container.remove();
-            }
+            });
         });
     });
 });

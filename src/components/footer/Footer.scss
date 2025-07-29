@@ -3,6 +3,13 @@
 .footer-text {
   text-align: center;
   color: $subTitle !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  padding: 0 15px;
+  overflow: visible;
+  white-space: normal;
+  line-height: 1.4;
 }
 
 .dark-mode {
@@ -12,4 +19,8 @@
 .footer-div {
   margin-top: 2rem;
   padding-bottom: 1rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }

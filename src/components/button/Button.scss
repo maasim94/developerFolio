@@ -18,35 +18,59 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
 }
+
 .main-button:hover {
   background-color: $darkBoxShadow2;
   color: $buttonColor;
   transition: all 0.3s ease 0s;
   transform: translateY(-3px);
 }
+
 .project-button {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-.project-button > .main-button {
+
+.project-button>.main-button {
   margin-right: 0 !important;
 }
+
 /* Media Query */
 @media (max-width: 480px) {
   .main-button {
-    font-size: 0.875rem; /* 14px minimum for readability */
-    padding: 14px 20px; /* Increased touch area */
-    min-width: 120px; /* Ensure adequate touch target */
-    min-height: 44px; /* iOS recommended minimum */
+    font-size: 0.875rem;
+    /* 14px minimum for readability */
+    padding: 14px 20px;
+    /* Increased touch area */
+    min-width: 120px;
+    /* Ensure adequate touch target */
+    min-height: 44px;
+    /* iOS recommended minimum */
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main-button {
+    font-size: 0.875rem;
+    /* 14px minimum for readability */
+    padding: 12px 18px;
+    /* Optimized for medium mobile */
+    min-width: 110px;
+    /* Slightly smaller for 375px screens */
+    min-height: 40px;
+    /* Reduced height for better proportion on medium mobile */
     margin-right: 0px;
   }
 }
 
 @media (max-width: 320px) {
   .main-button {
-    font-size: 0.875rem; /* Keep readable size - no smaller than 14px */
+    font-size: 0.875rem;
+    /* Keep readable size - no smaller than 14px */
     padding: 12px 18px;
-    width: 100%; /* Full width on very small screens */
+    width: 100%;
+    /* Full width on very small screens */
   }
 }

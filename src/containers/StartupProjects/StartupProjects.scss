@@ -6,29 +6,44 @@
   width: 250px;
   border-radius: 40px;
 }
+
 .card-title {
   color: $titleColor;
   font-size: 22px;
   line-height: 24px;
   font-weight: 700;
   margin: 15px 0 0 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: visible;
 }
+
 .card-subtitle {
   color: $cardSubtitle;
   font-size: 17px;
   line-height: 1.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: visible;
 }
+
 .project-card {
   display: flex;
   flex-direction: column;
-  background-color: $lightBackground2;
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
   justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .project-card-light {
+  background-color: $lightBackground2;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -36,6 +51,7 @@
 }
 
 .project-card-dark {
+  background-color: $darkBackground;
   box-shadow: 0px 10px 30px -15px $darkBoxShadow;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -43,24 +59,35 @@
 }
 
 .project-content {
-  display: flex; /* Enable flexbox layout for flexible space */
-  flex-direction: column; /* Stack elements vertically */
+  display: flex;
+  /* Enable flexbox layout for flexible space */
+  flex-direction: column;
+  /* Stack elements vertically */
   justify-content: space-between;
   flex: 1;
   align-items: center;
+  overflow: visible;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .project-detail {
   flex: 1;
   text-align: center;
+  overflow: visible;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
 }
 
 .project-card-light:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
 }
+
 .project-card-dark:hover {
   box-shadow: 0px 20px 30px -10px $darkBoxShadow;
 }
+
 .project-image {
   position: relative;
   height: 250px;
@@ -68,12 +95,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem 1rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 200px;
+  overflow: visible;
 }
 
 .project-card-footer span.project-tag {
@@ -98,5 +131,185 @@
   .project-subtitle {
     font-size: 16px;
     text-align: center;
+  }
+
+  /* Fix for projects container on mobile */
+  .projects-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: grid !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible;
+  }
+
+  .project-card {
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 400px;
+    overflow: visible;
+  }
+
+  .card-image {
+    width: 100%;
+    max-width: 250px;
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .project-image {
+    height: auto;
+    min-height: 200px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    display: flex !important;
+    visibility: visible !important;
+  }
+
+  .project-content {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 3;
+  }
+
+  .project-detail {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+    display: grid !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    grid-template-columns: 1fr !important;
+    /* Force immediate visibility */
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .project-card {
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 350px;
+    transform: none !important;
+    /* Ensure immediate visibility on load */
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .project-image {
+    min-height: 150px;
+    position: relative;
+    z-index: 3;
+    display: flex !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  .card-title {
+    font-size: 18px;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .card-subtitle {
+    font-size: 14px;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .project-content {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 3;
+    transform: none !important;
+  }
+
+  .project-detail {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Override react-reveal animations on mobile */
+  .react-reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* Ensure all project elements are visible */
+  .project-card * {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Force the main container to be visible */
+  .main {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    transform: none !important;
+  }
+
+  /* Force fade wrapper to be visible */
+  div[data-reactid] {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Aggressive override for any fade animations */
+  * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-fill-mode: none !important;
+  }
+
+  /* Specific overrides for projects section */
+  #projects * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Override any fade-in or slide-in animations */
+  [class*="fade"],
+  [class*="slide"],
+  [class*="reveal"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
   }
 }

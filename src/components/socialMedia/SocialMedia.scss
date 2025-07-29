@@ -88,3 +88,20 @@
     text-align: center;
   }
 }
+
+/* Mobile touch improvements */
+@media (max-width: 480px) {
+  .icon-button i {
+    margin: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    width: 2.8rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    font-size: 1.4rem;
+  }
+
+  .social-media-div {
+    margin: 20px 0;
+  }
+}

@@ -72,9 +72,11 @@
   font-size: 25px;
   text-align: center;
   font-weight: 700;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: visible;
+  white-space: normal;
+  line-height: 1.2;
 }
 
 .experience-roundedimg {
@@ -100,9 +102,11 @@
   padding-top: 1.5rem;
   line-height: normal;
 }
+
 .dark-mode-text {
   color: $textColorDark !important;
 }
+
 .experience-text-date {
   text-align: center;
   color: $textColor;
@@ -111,6 +115,7 @@
   padding-top: 1rem;
   font-weight: 600;
 }
+
 .experience-text-location {
   text-align: center;
   color: $textColor;
@@ -137,15 +142,24 @@
     padding-top: 0.5rem;
     font-size: 22px;
   }
+
   .experience-text-company {
     font-size: 22px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: visible;
+    white-space: normal;
+    line-height: 1.2;
   }
+
   .experience-text-date {
     font-size: 18px;
   }
+
   .experience-text-location {
     font-size: 16px;
   }
+
   .experience-roundedimg {
     width: 6.5rem;
     height: 6.5rem;
@@ -156,12 +170,20 @@
   .experience-text-role {
     font-size: 22px;
   }
+
   .experience-text-company {
     font-size: 22px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: visible;
+    white-space: normal;
+    line-height: 1.2;
   }
+
   .experience-text-date {
     font-size: 18px;
   }
+
   .experience-text-desc {
     font-size: 16px;
   }
