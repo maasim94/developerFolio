@@ -28,6 +28,8 @@
   margin: 0px auto;
   box-sizing: border-box;
   overflow-x: hidden;
+  z-index: 1001; /* Ensure header stays above project cards and other content */
+  position: relative; /* Required for z-index to work */
 }
 
 .header ul {
