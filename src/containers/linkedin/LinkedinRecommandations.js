@@ -3,32 +3,13 @@ import "./LinkedinRecommandations.scss";
 import { linkedinRecommandations } from "../../portfolio";
 import { Fade } from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import recommendationsData from "../../assets/csv/recommendations.csv";
-import { readString } from "react-papaparse"; // Destructure parse function
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 3 // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2 // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1 // optional, default to 1.
-  }
-};
+import { readString } from "react-papaparse";
 
 export default function LinkedinRecommandations() {
   const { isDark } = useContext(StyleContext);
   const [recommendations, setRecommendations] = useState([]);
+  const [showAllRecommendations, setShowAllRecommendations] = useState(false);
 
   useEffect(() => {
     const papaConfig = {
@@ -48,71 +29,135 @@ export default function LinkedinRecommandations() {
     return null;
   }
 
-  return (
-    <Fade bottom duration={1000} distance="20px">
-      <div className="main" id="recommandations">
-        <h1 className="skills-heading">{linkedinRecommandations.title}</h1>
-        <p
-          className={
-            isDark
-              ? "dark-mode linkedin-subtitle"
-              : "subTitle linkedin-subtitle"
-          }
-        >
-          {linkedinRecommandations.subTitle}
-        </p>
+  // Always show only first 3 recommendations on main page
+  const displayRecommendations = recommendations.slice(0, 3);
 
-        <Carousel
-          swipeable={true}
-          draggable={false}
-          showDots={true}
-          responsive={responsive}
-          ssr={true} // means to render carousel on server-side.
-          infinite={true}
-          autoPlay={true}
-          renderDotsOutside={true}
-          renderButtonGroupOutside={false}
-          autoPlaySpeed={4000}
-          keyBoardControl={true}
-          customTransition="all .5"
-          transitionDuration={500}
-          itemClass="recommendation-item"
-        >
-          {recommendations.map((recommendation, index) => (
+  // Generate avatar URL based on name
+  const getAvatarUrl = (firstName, lastName) => {
+    return `https://ui-avatars.com/api/?name=${encodeURIComponent(firstName + ' ' + lastName)}&background=0078d4&color=ffffff&size=60&bold=true`;
+  };
 
-            <div className="recommendation-item2" key={index}>
-              <p
-                className={
-                  isDark
-                    ? "dark-mode recommendation-name"
-                    : "recommendation-name"
-                }
-              >
-                {recommendation["First Name"]} {recommendation["Last Name"]}
-              </p>
-              <p
-                className={
-                  isDark
-                    ? "recommendation-company"
-                    : "recommendation-company"
-                }
-              >
-                {recommendation["Job Title"]} at {recommendation.Company}
-              </p>
-              <p
-                className={
-                  isDark
-                    ? "dark-mode recommendation-text"
-                    : "recommendation-text"
-                }
-              >
-                {recommendation["Text"]}
-              </p>
-            </div>
+  const getAvatarUrlLarge = (firstName, lastName) => {
+    return `https://ui-avatars.com/api/?name=${encodeURIComponent(firstName + ' ' + lastName)}&background=0078d4&color=ffffff&size=80&bold=true`;
+  };
 
-          ))}
-        </Carousel>
+  const handleViewAllRecommendations = () => {
+    setShowAllRecommendations(true);
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleCloseAllRecommendations = () => {
+    setShowAllRecommendations(false);
+    // Restore body scroll
+    document.body.style.overflow = 'unset';
+  };
+
+  const renderRecommendationCard = (recommendation, index) => (
+    <div className="recommendation-card" key={index}>
+      <div className="recommendation-header">
+        <img 
+          src={getAvatarUrl(recommendation["First Name"], recommendation["Last Name"])}
+          alt={`${recommendation["First Name"]} ${recommendation["Last Name"]}`}
+          className="recommendation-avatar"
+        />
+        <div className="recommendation-info">
+          <p className={isDark ? "dark-mode recommendation-name" : "recommendation-name"}>
+            {recommendation["First Name"]} {recommendation["Last Name"]}
+          </p>
+          <p className={isDark ? "dark-mode recommendation-company" : "recommendation-company"}>
+            {recommendation["Job Title"]} at {recommendation.Company}
+          </p>
+        </div>
       </div>
-    </Fade>
+      <p className={isDark ? "dark-mode recommendation-text" : "recommendation-text"}>
+        {recommendation["Text"]}
+      </p>
+    </div>
+  );
+
+  const renderAllRecommendationsCard = (recommendation, index) => (
+    <div className="all-recommendation-card" key={index}>
+      <div className="all-recommendation-header">
+        <img 
+          src={getAvatarUrlLarge(recommendation["First Name"], recommendation["Last Name"])}
+          alt={`${recommendation["First Name"]} ${recommendation["Last Name"]}`}
+          className="all-recommendation-avatar"
+        />
+        <div className="all-recommendation-info">
+          <p className={isDark ? "dark-mode all-recommendation-name" : "all-recommendation-name"}>
+            {recommendation["First Name"]} {recommendation["Last Name"]}
+          </p>
+          <p className={isDark ? "dark-mode all-recommendation-company" : "all-recommendation-company"}>
+            {recommendation["Job Title"]} at {recommendation.Company}
+          </p>
+        </div>
+      </div>
+      <p className={isDark ? "dark-mode all-recommendation-text" : "all-recommendation-text"}>
+        {recommendation["Text"]}
+      </p>
+    </div>
+  );
+
+  return (
+    <>
+      <Fade bottom duration={1000} distance="20px">
+        <div className="main" id="recommandations">
+          <h1 className="skills-heading">{linkedinRecommandations.title}</h1>
+          <p
+            className={
+              isDark
+                ? "dark-mode linkedin-subtitle"
+                : "subTitle linkedin-subtitle"
+            }
+          >
+            {linkedinRecommandations.subTitle}
+          </p>
+
+          <div className="recommendations-grid">
+            {displayRecommendations.map((recommendation, index) => 
+              renderRecommendationCard(recommendation, index)
+            )}
+          </div>
+
+          {recommendations.length > 3 && (
+            <div className="view-all-button-container">
+              <button 
+                className={isDark ? "dark-mode view-all-btn" : "view-all-btn"}
+                onClick={handleViewAllRecommendations}
+              >
+                View All Recommendations ({recommendations.length})
+              </button>
+            </div>
+          )}
+        </div>
+      </Fade>
+
+      {/* All Recommendations Modal */}
+      {showAllRecommendations && (
+        <div className={isDark ? "dark-mode recommendations-modal" : "recommendations-modal"}>
+          <div className="recommendations-modal-content">
+            <div className="recommendations-modal-header">
+              <h2 className={isDark ? "dark-mode modal-title" : "modal-title"}>
+                All LinkedIn Recommendations
+              </h2>
+              <button 
+                className={isDark ? "dark-mode close-button" : "close-button"}
+                onClick={handleCloseAllRecommendations}
+              >
+                ×
+              </button>
+            </div>
+            <div className="recommendations-modal-body">
+              <div className="all-recommendations-grid">
+                {recommendations.map((recommendation, index) => 
+                  renderAllRecommendationsCard(recommendation, index)
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
