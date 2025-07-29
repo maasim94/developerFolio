@@ -115,6 +115,8 @@
   .greeting-text {
     font-size: 30px;
     text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
   }
 
   .greeting-text-p {
@@ -125,10 +127,43 @@
 
   .greeting-main {
     display: block;
+    padding-top: 20px;
+  }
+
+  .greet-main {
+    margin-top: 0;
+    /* Ensure content is pushed below the header to avoid cut-off on mobile */
+    padding-top: 80px;
+  }
+
+  /* Hide the person illustration on mobile to save space and prevent scrolling issues */
+  .greeting-image-div {
+    display: none;
+  }
+}
+
+/* Tablet-specific adjustments to prevent overflow */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .greeting-text {
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .greet-main {
+    margin-top: 1.5rem;
+    padding-top: 30px;
   }
 
   .greeting-image-div {
-    height: 256px;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .greeting-image-div img,
+  .greeting-image-div>div {
+    max-height: 300px;
+    width: auto;
+    object-fit: contain;
   }
 }
 
