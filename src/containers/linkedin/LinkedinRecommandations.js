@@ -29,8 +29,20 @@ export default function LinkedinRecommandations() {
     return null;
   }
 
-  // Always show only first 3 recommendations on main page
-  const displayRecommendations = recommendations.slice(0, 3);
+  // Helper function to shuffle array
+  const shuffleArray = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  // Always show random 3 recommendations on main page
+  const displayRecommendations = recommendations.length > 3 
+    ? shuffleArray(recommendations).slice(0, 3)
+    : recommendations;
 
   // Generate avatar URL based on name
   const getAvatarUrl = (firstName, lastName) => {
