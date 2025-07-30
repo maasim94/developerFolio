@@ -8,7 +8,8 @@
   -webkit-border-radius: 25px;
   border-radius: 25px;
 }
-.meter > span {
+
+.meter>span {
   display: block;
   height: 100%;
   border-top-right-radius: 6px;
@@ -19,13 +20,16 @@
   position: relative;
   overflow: hidden;
 }
+
 .skill {
   line-height: 3.5vw;
 }
+
 .skill-bars {
   font-size: 28px;
   width: 40%;
 }
+
 .skills-container {
   display: flex;
   width: 90%;
@@ -33,11 +37,13 @@
   margin: 0px auto;
   margin-top: 2rem;
 }
-.skills-container > * {
+
+.skills-container>* {
   flex: 1;
   margin-bottom: 30px;
 }
-.skills-image > img {
+
+.skills-image>img {
   margin-left: 80px;
   max-width: 90%;
   height: auto;
@@ -50,13 +56,16 @@
   .skills-container {
     display: flex;
     flex-direction: row;
-    padding-top: 60px; /* Account for header like greeting section */
+    padding-top: 60px;
+    /* Account for header like greeting section */
     padding: 60px 20px 20px 20px;
-    align-items: center; /* Center vertically */
+    align-items: center;
+    /* Center vertically */
   }
 
   .skill-bars {
-    flex: 0 0 60%; /* 60% width like greeting section */
+    flex: 0 0 60%;
+    /* 60% width like greeting section */
     font-size: 24px;
     width: 60%;
     margin-right: 20px;
@@ -68,16 +77,18 @@
   }
 
   .skills-image {
-    flex: 0 0 40%; /* 40% width like greeting section */
+    flex: 0 0 40%;
+    /* 40% width like greeting section */
     max-width: 100%;
     margin: 0;
-    order: 2; /* Keep on right side */
+    order: 2;
+    /* Keep on right side */
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .skills-image > img {
+  .skills-image>img {
     margin-left: 0;
     max-width: 100%;
     height: auto;
@@ -89,12 +100,14 @@
   .skills-bar {
     line-height: 4rem;
   }
+
   .skills-image {
     max-width: 300px;
     margin: 20px auto;
     order: 2;
   }
-  .skills-image > img {
+
+  .skills-image>img {
     margin-left: 0;
   }
 }
@@ -105,17 +118,20 @@
     flex-direction: column;
     padding: 20px 15px;
   }
+
   .skills-bar {
     line-height: 3rem;
     margin: 10px 0;
   }
+
   .skills-image {
     max-width: 250px;
     margin: 20px auto 0;
     display: block;
     order: 2;
   }
-  .skills-image > img {
+
+  .skills-image>img {
     margin-left: 0;
   }
 }

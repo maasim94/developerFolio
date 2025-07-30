@@ -149,7 +149,8 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .greet-main {
     margin-top: 1rem;
-    padding-top: 60px; /* Increased to ensure headline is visible below header */
+    padding-top: 60px;
+    /* Increased to ensure headline is visible below header */
     /* Ensure no internal scrolling */
     overflow: visible !important;
     height: auto !important;

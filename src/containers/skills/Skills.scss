@@ -48,27 +48,33 @@
   .skills-main-div {
     display: flex;
     flex-direction: row;
-    padding-top: 60px; /* Account for header like greeting section */
-    align-items: center; /* Center vertically */
+    padding-top: 60px;
+    /* Account for header like greeting section */
+    align-items: center;
+    /* Center vertically */
   }
 
   .skills-image-div {
-    flex: 0 0 40%; /* 40% width like greeting section */
-    order: 0; /* Move to left side */
+    flex: 0 0 40%;
+    /* 40% width like greeting section */
+    order: 0;
+    /* Move to left side */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 30px;
   }
 
-  .skills-image-div > img {
+  .skills-image-div>img {
     max-width: 100%;
     height: auto;
   }
 
   .skills-text-div {
-    flex: 0 0 60%; /* 60% width like greeting section */
-    order: 1; /* Move to right side */
+    flex: 0 0 60%;
+    /* 60% width like greeting section */
+    order: 1;
+    /* Move to right side */
     margin-left: 0;
     margin-right: 20px;
     overflow: visible;
