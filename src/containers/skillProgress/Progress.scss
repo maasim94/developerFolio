@@ -45,36 +45,77 @@
 
 /* Media Query */
 
-@media (max-width: 1456px) and (min-width: 768px) {
+/* Tablet styles for 768px-1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .skills-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 60px; /* Account for header like greeting section */
+    padding: 60px 20px 20px 20px;
+    align-items: center; /* Center vertically */
+  }
+
+  .skill-bars {
+    flex: 0 0 60%; /* 60% width like greeting section */
+    font-size: 24px;
+    width: 60%;
+    margin-right: 20px;
+  }
+
+  .skills-bar {
+    line-height: 3.5rem;
+    margin: 15px 0;
+  }
+
+  .skills-image {
+    flex: 0 0 40%; /* 40% width like greeting section */
+    max-width: 100%;
+    margin: 0;
+    order: 2; /* Keep on right side */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skills-image > img {
+    margin-left: 0;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Larger desktop styles */
+@media (min-width: 1025px) and (max-width: 1456px) {
   .skills-bar {
     line-height: 4rem;
   }
   .skills-image {
-    max-width: 300px; /* Reduce size instead of hiding */
+    max-width: 300px;
     margin: 20px auto;
     order: 2;
   }
   .skills-image > img {
-    margin-left: 0; /* Center the image */
+    margin-left: 0;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile styles for 767px and below */
+@media (max-width: 767px) {
   .skills-container {
     flex-direction: column;
-    padding: 20px 15px; /* Add mobile padding */
+    padding: 20px 15px;
   }
   .skills-bar {
     line-height: 3rem;
-    margin: 10px 0; /* Reduced margin for mobile */
+    margin: 10px 0;
   }
   .skills-image {
     max-width: 250px;
     margin: 20px auto 0;
-    display: block; /* Show on mobile with reduced size */
+    display: block;
     order: 2;
   }
   .skills-image > img {
-    margin-left: 0; /* Center the image */
+    margin-left: 0;
   }
 }

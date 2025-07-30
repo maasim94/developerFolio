@@ -5,6 +5,7 @@
   padding: 20px 10px;
   margin: 0px auto;
   margin-top: 4rem;
+  height: auto;
 }
 
 .greet-main {
@@ -12,6 +13,7 @@
   padding: 20px 10px;
   margin: 0px auto;
   margin-top: 2rem;
+  height: auto;
 }
 
 .greeting-main {
@@ -24,6 +26,7 @@
 
 .greeting-main {
   display: flex;
+  height: auto;
 }
 
 .greeting-main>* {
@@ -107,7 +110,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .button-greeting-div {
     justify-content: space-around;
   }
@@ -142,28 +145,90 @@
   }
 }
 
-/* Tablet-specific adjustments to prevent overflow */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .greeting-text {
-    margin-top: 0;
-    padding-top: 20px;
-  }
-
+/* Tablet-specific adjustments - Enhanced 2-column layout */
+@media (min-width: 768px) and (max-width: 1024px) {
   .greet-main {
-    margin-top: 1.5rem;
-    padding-top: 30px;
+    margin-top: 1rem;
+    padding-top: 60px; /* Increased to ensure headline is visible below header */
+    /* Ensure no internal scrolling */
+    overflow: visible !important;
+    height: auto !important;
   }
 
+  /* Ensure main containers don't create scroll containers */
+  .main {
+    overflow: visible !important;
+    height: auto !important;
+    width: 95%;
+    /* Slight increase for tablets */
+    max-width: 1000px;
+  }
+
+  .greeting-main {
+    display: flex !important;
+    /* Ensure 2-column layout */
+    align-items: center;
+    gap: 30px;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto;
+  }
+
+  /* Text column - balanced sizing */
+  .greeting-text-div {
+    flex: 1.2;
+    /* Slightly more space for text */
+    max-width: 60%;
+  }
+
+  .greeting-text {
+    font-size: 42px;
+    /* Optimized for tablet */
+    line-height: 1.2;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: left;
+    /* Better for tablets */
+  }
+
+  .greeting-text-p {
+    font-size: 18px;
+    /* Readable on tablets */
+    line-height: 1.4;
+    margin-top: 15px;
+    text-align: left;
+  }
+
+  /* Image column - show the person illustration */
   .greeting-image-div {
-    height: 300px;
-    overflow: hidden;
+    flex: 0.8;
+    /* Controlled space for image */
+    max-width: 40%;
+    height: auto !important;
+    /* Remove fixed height */
+    overflow: visible !important;
+    /* Allow natural sizing */
+    display: flex !important;
+    /* Ensure it shows */
+    align-items: center;
+    justify-content: center;
   }
 
   .greeting-image-div img,
   .greeting-image-div>div {
-    max-height: 300px;
+    max-height: 350px;
+    /* Reasonable size for tablets */
+    max-width: 100%;
     width: auto;
+    height: auto;
     object-fit: contain;
+  }
+
+  /* Button positioning for tablets */
+  .button-greeting-div {
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 25px;
   }
 }
 
