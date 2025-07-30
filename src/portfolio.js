@@ -23,7 +23,7 @@ const greeting = {
   username: "Muhammad Arslan Asim",
   title: "Hi all, I'm Arslan",
   subTitle: emoji(
-    "An accomplished Senior Mobile Software Engineer with 10+ years of specialized iOS development experience, driving mission-critical applications from concept to delivery. Led cross-functional teams in architecting scalable solutions that increased user engagement by 40% and reduced technical debt by 60%. Spearheaded the adoption of Swift and SwiftUI best practices across multiple enterprise projects, while mentoring junior developers and establishing robust CI/CD pipelines. Currently expanding expertise into cross-platform development with Flutter and React Native to champion platform-agnostic solutions. Demonstrated track record of delivering high-performance applications for Fortune 500 clients, with a focus on clean architecture, test-driven development, and optimal user experience. Seeking strategic leadership opportunities to drive technical innovation and team excellence in a forward-thinking organization."
+    "Senior Mobile Software Engineer with 12+ years of iOS development experience. Led cross-functional teams architecting scalable solutions that increased user engagement by 40% and reduced technical debt by 60%. Spearheaded Swift and SwiftUI adoption while mentoring developers. Currently expanding into cross-platform development with Flutter, building hybrid solutions. Exploring AI-driven development and agentic coding to embrace emerging technologies. Seeking strategic leadership opportunities to drive technical innovation."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1kKnklXHqsBPgMXckQqhDWmA6BO4z6VF8/view?usp=drivesdk", // Set to empty to hide the button
@@ -52,9 +52,11 @@ const skillsSection = {
     emoji("• Led development of high-performance native mobile applications using Swift/SwiftUI, reducing load times by 40%"),
     emoji("• Implemented robust CI/CD pipelines and automated testing frameworks, increasing deployment efficiency by 60%"),
     emoji("• Spearheaded adoption of modern iOS frameworks (Core ML, ARKit, SwiftUI), enabling next-generation features"),
+    emoji("• Explored Flutter development for cross-platform solutions, reducing codebase maintenance by 30%"),
+    emoji("• Investigating AI-driven development tools and agentic coding practices to enhance productivity and code quality"),
     emoji("• Mentored development teams in mobile best practices, design patterns, and code quality standards"),
     emoji("• Orchestrated successful integration of complex third-party services while maintaining strict security protocols"),
-    emoji("• Areas of Expertise: iOS Application Architecture, Performance Optimization, Technical Team Leadership, Mobile Security & Compliance, Cross-Platform Development Strategy, UI/UX Implementation, API Integration & System Design"),
+    emoji("• Areas of Expertise: iOS Application Architecture, Performance Optimization, Technical Team Leadership, Mobile Security & Compliance, Cross-Platform Development Strategy, AI-Driven Development, Agentic Coding Exploration, UI/UX Implementation, API Integration & System Design"),
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -86,6 +88,10 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "far fa-file-code",
     },
     {
+      skillName: "GraphQL",
+      fontAwesomeClassname: "fas fa-project-diagram"
+    },
+    {
       skillName: "Objective-C",
       fontAwesomeClassname: "fas fa-laptop-code"
     },
@@ -102,6 +108,10 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fas fa-fire"
     },
     {
+      skillName: "Push Notifications",
+      fontAwesomeClassname: "fas fa-bell"
+    },
+    {
       skillName: "Cocoapods",
       fontAwesomeClassname: "fas fa-link"
     },
@@ -110,12 +120,52 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fas fa-bug"
     },
     {
+      skillName: "Test Automation",
+      fontAwesomeClassname: "fas fa-cogs"
+    },
+    {
+      skillName: "Unit Testing",
+      fontAwesomeClassname: "fas fa-flask"
+    },
+    {
+      skillName: "TestFlight",
+      fontAwesomeClassname: "fas fa-plane"
+    },
+    {
+      skillName: "Mobile Analytics",
+      fontAwesomeClassname: "fas fa-chart-line"
+    },
+    {
       skillName: "Realm",
       fontAwesomeClassname: "fas fa-database"
     },
     {
       skillName: "Git",
       fontAwesomeClassname: "fab fa-git"
+    },
+    {
+      skillName: "Fastlane",
+      fontAwesomeClassname: "fas fa-rocket"
+    },
+    {
+      skillName: "Azure DevOps",
+      fontAwesomeClassname: "fab fa-microsoft"
+    },
+    {
+      skillName: "CI/CD",
+      fontAwesomeClassname: "fas fa-cogs"
+    },
+    {
+      skillName: "Jenkins",
+      fontAwesomeClassname: "fab fa-jenkins"
+    },
+    {
+      skillName: "UI Testing",
+      fontAwesomeClassname: "fas fa-eye"
+    },
+    {
+      skillName: "Mobile Security",
+      fontAwesomeClassname: "fas fa-shield-alt"
     },
     {
       skillName: "REST API",
@@ -149,6 +199,14 @@ const techStack = {
     {
       Stack: "Technical Leadership",
       progressPercentage: "85%"
+    },
+    {
+      Stack: "Flutter Development",
+      progressPercentage: "40%"
+    },
+    {
+      Stack: "AI/ML Integration",
+      progressPercentage: "35%"
     },
     {
       Stack: "Legacy System Expertise",
@@ -193,12 +251,12 @@ const workExperiences = {
       companylogo: require("./assets/images/appsfactory_logo.jpeg"),
       date: "Mar 2020 – Present",
       location: "Hamburg, Germany",
-      desc: `
-      • Led the end-to-end development of multiple enterprise iOS applications, achieving 4.8+ App Store ratings and 99.9% crash-free sessions.
-      • Architected scalable solutions and implemented CI/CD pipelines, reducing deployment time by 60%.
-      • Mentored and onboarded junior engineers, fostering a culture of code quality and continuous improvement.
-      • Collaborated cross-functionally to deliver features on schedule, resulting in a 30% increase in user engagement.
-      `,
+      desc: "Leading enterprise iOS development and cross-platform initiatives while driving technical excellence and team mentorship.",
+      descBullets: [
+        "Delivered multiple enterprise iOS applications achieving 4.8+ App Store ratings and 99.9% crash-free sessions",
+        "Architected scalable CI/CD pipelines reducing deployment time by 60% with automated testing frameworks",
+        "Learned and adopted Flutter for cross-platform development, successfully delivering hybrid solutions that increased user engagement by 30%"
+      ]
     },
     {
       role: "Senior Software Engineer (iOS)",
@@ -207,12 +265,12 @@ const workExperiences = {
       date: `Jan 2019 – Feb 2020 
       Feb 2017 – Apr 2018`,
       location: "Abu Dhabi, UAE",
-      desc: `
-      • Delivered four mission-critical iOS applications for UAE federal digital transformation, impacting 1M+ users.
-      • Led architectural design and integration with secure government APIs, ensuring compliance and data integrity.
-      • Coordinated with backend and QA teams to optimize user experience and reduce bug rates by 40%.
-      • Championed agile methodologies, accelerating project delivery timelines by 25%.
-      `
+      desc: "Spearheaded digital transformation initiatives for UAE federal government developing mission-critical applications serving 1M+ citizens.",
+      descBullets: [
+        "Delivered four mission-critical iOS applications for UAE federal digital transformation impacting 1M+ users",
+        "Led architectural design with secure government APIs ensuring compliance and data integrity standards",
+        "Implemented agile methodologies and cross-functional collaboration accelerating project delivery timelines by 25%"
+      ]
     },
     {
       role: "Software Engineer (iOS)",
@@ -220,12 +278,12 @@ const workExperiences = {
       companylogo: require("./assets/images/algorythma.jpg"),
       date: "April 2018 – Jan 2019",
       location: "Abu Dhabi, UAE",
-      desc: `
-      • Engineered core features for Swoo, a high-traffic live streaming app with 10M+ downloads.
-      • Optimized app performance and scalability, supporting millions of concurrent users with <1% crash rate.
-      • Implemented advanced video streaming and analytics modules, increasing user retention by 20%.
-      • Collaborated with cross-functional teams to deliver new releases on aggressive timelines.
-      `
+      desc: "Developed core features for Swoo live streaming platform serving millions of users with advanced capabilities.",
+      descBullets: [
+        "Engineered core features for high-traffic live streaming app with 10M+ downloads achieving <1% crash rate",
+        "Implemented advanced video streaming and analytics modules increasing user retention by 20% with optimized performance",
+        "Collaborated with cross-functional teams delivering new releases on aggressive timelines with consistent quality standards"
+      ]
     },
     {
       role: "Software Engineer (iOS)",
@@ -233,12 +291,12 @@ const workExperiences = {
       companylogo: require("./assets/images/nextbridge.jpg"),
       date: "Mar 2014 – Feb 2017",
       location: "Lahore, Pakistan",
-      desc: `
-      • Progressed from junior to mid-level engineer by consistently delivering high-quality iOS solutions for diverse clients.
-      • Led the development of key modules for multiple client projects, improving delivery speed by 35%.
-      • Introduced code review and automated testing practices, reducing post-release defects by 25%.
-      • Mentored new team members and contributed to a collaborative, high-performance culture.
-      `
+      desc: "Advanced from junior to mid-level engineer while establishing development best practices and leading projects.",
+      descBullets: [
+        "Led key modules for multiple client projects improving delivery speed by 35% with consistent quality",
+        "Introduced code review and automated testing practices reducing post-release defects by 25% across all projects",
+        "Mentored new team members and fostered collaborative culture contributing to high-performance development environment"
+      ]
     },
     {
       role: "Junior Software Engineer (iOS)",
@@ -246,11 +304,12 @@ const workExperiences = {
       location: "Islamabad, Pakistan",
       companylogo: require("./assets/images/s3_technology.png"),
       date: "May 2013 – March 2014",
-      desc: `
-      • Developed and maintained iOS applications for local clients, delivering projects on time and within scope.
-      • Quickly mastered new technologies and frameworks, accelerating onboarding and project ramp-up.
-      • Demonstrated strong problem-solving skills and a commitment to continuous learning.
-      `
+      desc: "Launched professional iOS development career rapidly mastering mobile technologies while delivering client projects successfully.",
+      descBullets: [
+        "Developed and maintained iOS applications for local clients delivering projects on time and within scope",
+        "Quickly mastered new technologies and frameworks demonstrating strong learning agility and technical adaptability",
+        "Built strong client relationships and contributed to project success through effective communication and technical delivery"
+      ]
     },
   ]
 };
